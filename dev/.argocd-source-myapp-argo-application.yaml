@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - docker.io/satyam0786/argocd:5.1
