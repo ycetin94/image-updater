@@ -4,14 +4,14 @@ metadata:
   name: myapp-argo-application
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/satyam0786/argocd        
+    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/ycetin94/image-updater      
     argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds           
     argocd-image-updater.argoproj.io/git-branch: main                                          
     argocd-image-updater.argoproj.io/myalias.force-update: "true"
 spec:
   project: default
   source:
-    repoURL: https://github.com/satyamskic/argocd.git
+    repoURL: https://github.com/ycetin94/image-updater.git
     targetRevision: HEAD
     path: dev
   destination: 
@@ -25,3 +25,4 @@ spec:
     automated:
       selfHeal: true
       prune: true
+
