@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-argo-application
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: myalias=docker.io/satyam0786/argocd        
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds           
+    argocd-image-updater.argoproj.io/git-branch: main                                          
+    argocd-image-updater.argoproj.io/myalias.force-update: "true"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/satyamskic/argocd.git
+    targetRevision: HEAD
+    path: dev
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: myapp
+
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
