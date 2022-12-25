@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: apache
-        image: docker.io/ycetin94/mern-frontend:3
+        image: docker.io/ycetin94/mern-frontend:3.0
         ports:
         - containerPort: 80
