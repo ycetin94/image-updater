@@ -4,3 +4,9 @@ kind: Kustomization
 resources:
 - deployment.yaml
 - service.yaml
+- backend-app.yaml
+- frontend.yaml
+- backend-service.yaml
+- frontend-service.yaml
+- frontend-ingress.yaml
+- app-network-networkpolicy.yaml
