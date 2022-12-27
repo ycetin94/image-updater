@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - docker.io/ycetin94/mern-frontend:4.0
