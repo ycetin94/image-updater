@@ -2,8 +2,6 @@ namePrefix: kustomize-
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- deployment.yaml
-- service.yaml
 - backend-app.yaml
 - frontend-app.yaml
 - backend-service.yaml
