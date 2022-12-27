@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name:  frontend-app
-        image:  781017761620.dkr.ecr.us-east-1.amazonaws.com/mern-repo:frontend-build-35
+        image:  781017761620.dkr.ecr.us-east-1.amazonaws.com/mern-repo:frontend-build-39
         ports:
         - containerPort:  3000
       imagePullSecrets:
