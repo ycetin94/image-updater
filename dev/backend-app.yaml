@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name:  backend-app
-        image:  781017761620.dkr.ecr.us-east-1.amazonaws.com/mern-repo:backend-build-35
+        image:  781017761620.dkr.ecr.us-east-1.amazonaws.com/mern-repo:backend-build-39
         env:
         - name: NODE_ENV
           value: production
